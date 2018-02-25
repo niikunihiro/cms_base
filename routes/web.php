@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
+/** @var \Illuminate\Support\Facades\Route $router */
+$router->get('/', function () {
     return view('welcome');
 });
