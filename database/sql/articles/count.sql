@@ -1,0 +1,1 @@
+SELECT count(*) AS aggregate FROM article
