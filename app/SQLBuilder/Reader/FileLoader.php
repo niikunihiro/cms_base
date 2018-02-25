@@ -1,6 +1,6 @@
 <?php
 
-namespace App\SQLReader;
+namespace App\SQLBuilder\Reader;
 
 /**
  * Class FileLoader

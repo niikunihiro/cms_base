@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\SQLReader;
+namespace Tests\Unit\SQLBuilder\Reader;
 
-use App\SQLReader\SQLReader;
+use App\SQLBuilder\Reader\SQLReader;
 use Tests\TestCase;
 use Mockery as m;
 
@@ -14,14 +14,14 @@ class SQLReaderTest extends TestCase
 {
     /** @var \Illuminate\Filesystem\Filesystem $filesMock */
     private $filesMock;
-    /** @var \App\SQLReader\FileLoader $loaderMock */
+    /** @var \App\SQLBuilder\Reader\FileLoader $loaderMock */
     private $loaderMock;
 
     public function setUp()
     {
         parent::setUp();
         $this->filesMock  = m::mock('Illuminate\Filesystem\Filesystem');
-        $this->loaderMock = m::mock('App\SQLReader\FileLoader');
+        $this->loaderMock = m::mock('App\SQLBuilder\Reader\FileLoader');
     }
 
     public function tearDown()
@@ -32,7 +32,7 @@ class SQLReaderTest extends TestCase
 
     /**
      * @test
-     * @throws \App\SQLReader\SQLEmptyException
+     * @throws \App\SQLBuilder\Reader\SQLEmptyException
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     function getがSQLを返すことを確認()
@@ -48,9 +48,9 @@ class SQLReaderTest extends TestCase
 
     /**
      * @test
-     * @throws \App\SQLReader\SQLEmptyException
+     * @throws \App\SQLBuilder\Reader\SQLEmptyException
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @expectedException \App\SQLReader\SQLEmptyException
+     * @expectedException \App\SQLBuilder\Reader\SQLEmptyException
      */
     function sqlが空で返る時はSQLEmptyExceptionが投げられることを確認()
     {

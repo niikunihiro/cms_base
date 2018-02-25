@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\SQLReader;
+namespace Tests\Unit\SQLBuilder\Reader;
 
-use App\SQLReader\FileLoader;
+use App\SQLBuilder\Reader\FileLoader;
 use Tests\TestCase;
 
 /**
