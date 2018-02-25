@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset name="My first PHPMD rule set"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        My custom rule set that checks my code...
+    </description>
+
+    <exclude-pattern>*Test.php</exclude-pattern>
+
+    <!-- ここから利用したいルールを書く -->
+    <!-- Import the entire unused code rule set -->
+    <rule ref="rulesets/unusedcode.xml"/> <!-- 親ルールを指定すると含まれる子ルール全てが適用される -->
+    <!-- Import the entire cyclomatic complexity rule -->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity"/> <!-- 子ルールの循環的複雑度チェックだけいれたい -->
+    <!-- Import entire naming rule set and exclude rules -->
+    <rule ref="rulesets/naming.xml">
+        <exclude name="ShortVariable"/> <!-- 短い変数が使いたいので子ルールの一部を除外 -->
+    </rule>
+</ruleset>
