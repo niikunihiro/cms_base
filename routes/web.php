@@ -14,3 +14,5 @@
 $router->get('/', function () {
     return view('welcome');
 });
+
+$router->get('admin', 'DashboardController');
