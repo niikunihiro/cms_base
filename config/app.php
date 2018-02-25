@@ -1,6 +1,6 @@
 <?php
 
-return [
+$appConfig = [
 
     /*
     |--------------------------------------------------------------------------
@@ -212,3 +212,9 @@ return [
     ],
 
 ];
+
+if (env('APP_DEBUG')) {
+    $appConfig['providers'][] = Barryvdh\Debugbar\ServiceProvider::class;
+}
+
+return $appConfig;
