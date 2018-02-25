@@ -14,6 +14,7 @@
                 </div>
             </li>
             <li><a href="{{ url('admin') }}" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+            <li><a href="{{ url('admin/article') }}" class="active"><i class="fa fa-edit fa-fw"></i> Article</a></li>
             <li>
                 <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">

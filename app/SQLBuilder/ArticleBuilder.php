@@ -15,8 +15,6 @@ class ArticleBuilder extends Builder
      * @param string $sortKey ソートするカラム
      * @param string $sort    ソート順
      * @return string SQL を返す
-     * @throws Reader\SQLEmptyException SQL が空の時に投げる
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException File が存在しない時に投げる
      */
     public function findByBetween(string $columns, string $sortKey, string $sort)
     {
@@ -29,8 +27,6 @@ class ArticleBuilder extends Builder
      * article テーブルのレコード数を取得する SQL をビルドする
      *
      * @return string SQL を返す
-     * @throws Reader\SQLEmptyException SQL が空の時に投げる
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException File が存在しない時に投げる
      */
     public function count()
     {

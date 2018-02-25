@@ -16,3 +16,4 @@ $router->get('/', function () {
 });
 
 $router->get('admin', 'DashboardController');
+$router->resource('admin/article', 'ArticleController');
