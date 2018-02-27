@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Service\ArticleService;
 use Illuminate\Http\Request;
 
+/**
+ * Class ArticleController
+ */
 class ArticleController extends Controller
 {
     /** @var ArticleService $articleService */
@@ -30,6 +33,6 @@ class ArticleController extends Controller
         $params   = $request->only('start');
         $articles = $this->articleService->paginate((int)array_get($params, 'start', 1));
 
-        return view('admin.article.index', compact('articles'));
+        return view('adminlte.article.index', compact('articles'));
     }
 }

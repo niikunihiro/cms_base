@@ -7,7 +7,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Article</h1>
+                <h2 class="page-header">記事一覧</h2>
             </div>
         </div>
 
@@ -15,7 +15,16 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a href="{{ url('admin/article/create') }}" class="btn btn-info btn-circle"><i class="fa fa-pencil-square-o"></i></a>
+                        <div class="row">
+                            <div class="col-lg-6 text-left">
+                                <a href="{{ url('admin/article/create') }}" class="btn btn-info btn-circle"><i class="fa fa-pencil-square-o"></i></a>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <a href="{{ url('admin/article/create') }}" class="btn btn-primary btn-circle">20</a>
+                                <a href="{{ url('admin/article/create') }}" class="btn btn-default btn-circle">50</a>
+                                <a href="{{ url('admin/article/create') }}" class="btn btn-default btn-circle">100</a>
+                            </div>
+                        </div>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
